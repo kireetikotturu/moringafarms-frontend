@@ -234,7 +234,7 @@
   document.getElementById('pay-online').addEventListener('click', () => {
     if (checkForm()) {
       saveOrderDetails('online');
-      fetch('/create-order', {
+      fetch('https://moringafarms-backend.onrender.com/create-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ amount: grandTotal })
@@ -322,7 +322,7 @@
       }
     });
 
-    fetch('/success', {
+    fetch('https://moringafarms-backend.onrender.com/success', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ 
