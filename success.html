@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Order Success</title>
+  <style>
+    /* Reset default margin and padding */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    h1 {
+      color: #4caf50;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .message {
+      font-size: 1.25rem;
+      color: #356dbb;
+      margin-bottom: 30px;
+    }
+
+    #order-details {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 800px;
+      margin-bottom: 30px;
+    }
+
+    #order-details h2 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+      color: #333;
+    }
+
+    p {
+      font-size: 1rem;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    p strong {
+      font-weight: 600;
+      color: #333;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    li {
+      font-size: 1rem;
+      margin: 8px 0;
+      color: #555;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      margin: 10px 5px;
+      text-align: center;
+      transition: background-color 0.3s, transform 0.2s, box-shadow 0.2s;
+      width: 100%;
+      max-width: 250px;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .whatsapp-btn {
+      background-color: #25d366;
+      color: white;
+    }
+
+    .whatsapp-btn:hover {
+      background-color: #128c7e;
+    }
+
+    .home-btn {
+      background-color: #3c587e;
+      color: white;
+    }
+
+    .home-btn:hover {
+      background-color: #707b9e;
+    }
+
+    /* Responsive design */
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .message {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Thank You for Your Order!</h1>
+  <p class="message">We will get back to you soon.</p>
+
+  <div id="order-details">
+    <h2>Order Summary:</h2>
+    <p><strong>Name:</strong> <span id="name"></span></p>
+    <p><strong>Email:</strong> <span id="email"></span></p>
+    <p><strong>Phone:</strong> <span id="phone"></span></p>
+    <p><strong>Address:</strong> <span id="address"></span></p>
+    <p><strong>Total Price:</strong> ₹<span id="total-price"></span></p>
+    <p><strong>Payment Method:</strong> <span id="payment-method"></span></p>
+    <p><strong>Payment Status:</strong> <span id="payment-status"></span></p>
+    <h3>Items:</h3>
+    <ul id="items-list"></ul>
+  </div>
+
+  <a href="index.html" class="btn home-btn">Go to Home</a>
+  <a href="https://wa.me/919394121841?text=Hi%2C%20what%20is%20my%20order%20status%3F" class="btn whatsapp-btn" target="_blank">Contact Us on WhatsApp</a>
+
+  <script>
+    // Get the order details from localStorage
+    const orderDetails = JSON.parse(localStorage.getItem('orderDetails'));
+
+    if (orderDetails) {
+      document.getElementById('name').textContent = orderDetails.customer.name;
+      document.getElementById('email').textContent = orderDetails.customer.email;
+      document.getElementById('phone').textContent = orderDetails.customer.phone;
+      document.getElementById('address').textContent = orderDetails.customer.address;
+      document.getElementById('total-price').textContent = orderDetails.totalPrice;
+      document.getElementById('payment-method').textContent = orderDetails.paymentMethod;
+      document.getElementById('payment-status').textContent = orderDetails.paymentStatus;
+
+      const itemsList = document.getElementById('items-list');
+      orderDetails.cart.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = `${item.name} - Qty: ${item.quantity} - ₹${item.price * item.quantity}`;
+        itemsList.appendChild(li);
+      });
+    } else {
+      document.getElementById('order-details').innerHTML = '<p>No order details found.</p>';
+    }
+  </script>
+</body>
+</html>

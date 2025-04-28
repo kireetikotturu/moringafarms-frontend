@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Moringa Organic Store</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <div class="logo">
+      <a href="index.html" class="logo-link">
+        <span class="logo-icon">🌿</span>
+        <h1>Moringa Farm</h1>
+      </a>
+    </div>    
+    <a href="cart.html" class="cart-icon">
+      <span class="cart-emoji">🛒</span>
+      <span id="cart-count">0</span>
+    </a>
+
+    <!-- Hamburger Icon -->
+    <div class="hamburger" onclick="toggleMenu()">
+      ☰
+    </div>
+
+
+    <nav id="navbar">
+      <ul id="nav-menu">
+        <li><a class="nav-font" href="#hero">Home</a></li>
+        <li><a class="nav-font" href="#products">Products</a></li>
+        <li><a class="nav-font" href="#benefits">Benefits</a></li>
+        <li><a class="nav-font" href="#about">About</a></li>
+        <li><a class="nav-font" href="#contact">Contact</a></li>
+
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero fade-in">
+    <h2>Fresh & Organic Moringa Products</h2>
+    <p>Seeds, Leaves, Powder, Oil, and More</p>
+    <button onclick="shopNow()">Shop Now</button>
+  </section>
+
+  <section class="products-section" id="products">
+    <h2 class="products-heading">Our Moringa Products</h2>
+    <div class="product-grid">
+
+      <!-- Product 1 -->
+      <div class="product-card">
+        <span class="discount">-5%</span>
+        <img src="images/img1.jpg" alt="Moringa Leaves">
+        <h3>Moringa Leaves</h3>
+        <div class="price">₹30 / kg</div>
+        <div class="buttons">
+          <button class="add-to-cart-btn" data-name="Moringa Leaves" data-price="30">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <span class="discount">-5%</span>
+        <img src="images/img2.jpg" alt="Moringa Sticks">
+        <h3>Moringa Sticks</h3>
+        <div class="price">₹30 / kg</div>
+        <div class="buttons">
+          <button class="add-to-cart-btn" data-name="Moringa Sticks" data-price="30">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <span class="discount">-5%</span>
+        <img src="images/moringaseeds.jpg" alt="Moringa Seeds">
+        <h3>Moringa Seeds</h3>
+        <div class="price">₹30 / kg</div>
+        <div class="buttons">
+          <button class="add-to-cart-btn" data-name="Moringa Seeds" data-price="30">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <span class="discount">-5%</span>
+        <img class="card-image" src="images/moringa oil.jpg" alt="Moringa Oil">
+        <h3>Moringa Oil</h3>
+        <div class="price">₹30 / kg</div>
+        <div class="buttons">
+          <button class="add-to-cart-btn" data-name="Moringa Oil" data-price="30">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 5 -->
+      <div class="product-card">
+        <span class="discount">-5%</span>
+          <img src="images/Drumstickroots.jpeg" alt="Moringa Roots">
+        <h3>Moringa Roots</h3>
+        <div class="price">₹30 / kg</div>
+        <div class="buttons">
+          <button class="add-to-cart-btn" data-name="Moringa Roots" data-price="30">Add to Cart</button>
+        </div>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <span class="discount">-5%</span>
+        <img src="images/moringapowder.jpg" alt="Moringa Powder">
+        <h3>Moringa Powder</h3>
+        <div class="price">₹30 / kg</div>
+        <div class="buttons">
+          <button class="add-to-cart-btn" data-name="Moringa Powder" data-price="30">Add to Cart</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  
+
+
+  <section id="benefits" class="benefits fade-in">
+    <h2 class="benefits-head">Benefits of Moringa</h2>
+    <ul class="benefits-list">
+      <li>✅ Boosts immunity and energy levels</li>
+      <li>✅ Rich in vitamins, minerals, and antioxidants</li>
+      <li>✅ Supports healthy skin and hair</li>
+      <li>✅ Helps manage blood sugar and cholesterol</li>
+      <li>✅ 100% natural and chemical-free</li>
+    </ul>
+  
+    <!-- Responsive Image Row -->
+    <div class="benefit-images">
+      <img src="images/moringa.png" alt="Moringa Image" class="benefit-img">
+      <img src="images/moringa benifits.jpg" alt="Moringa Benefits" class="benefit-img">
+    </div>
+  </section>
+  
+
+  <section id="about" class="about fade-in">
+    <h2>About Us</h2>
+    <!-- About Content -->
+    <div class="about-content">
+      <!-- Left: Image -->
+      <div class="about-image">
+        <img src="images/photo.jpg" alt="About Organic Farms">
+      </div>
+  
+      <!-- Right: Text -->
+      <div class="about-text">
+        <p>I'm Sivaprasad, and I’m deeply passionate about healthy living and sustainable food practices. With nearly 37 years of experience in farming, I’ve dedicated my life to growing food that’s not only good for you but also good for the planet.</p>
+  
+        <p>At Organic Farms, we are committed to making a positive impact on the world through our dedication to organic, eco-friendly practices.</p>
+  
+        <p>Thank you for choosing our organic products — I look forward to serving you soon!</p>
+      </div>
+    </div>
+  
+    <!-- Video Section -->
+    <div class="about-video">
+      <video width="100%" controls autoplay muted loop>
+        <source src="images/vedio.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </section>
+  
+
+  <section id="contact" class="contact fade-in">
+    <div class="contact-container">
+      <h2>Contact Us</h2>
+      <p>We’d love to hear from you! Reach out using the form or details below.</p>
+  
+      <div class="contact-content">
+        <!-- Contact Info -->
+        <div class="contact-info">
+          <p><strong>Phone:</strong> <a href="tel:+919394121841">+91 93941 21841</a></p>
+          <p><strong>Email:</strong> <a href="mailto:info@organicfarms.com">info@organicfarms.com</a></p>
+          <p><strong>Address:</strong> Sangareddy, Charllagudem, Telangana, 502001</p>
+          <br>
+  
+          <!-- Google Map Embed -->
+          <div class="map-container">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9400.94259668529!2d78.08257758740329!3d17.518934341051235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbfabfd14829c1%3A0x12e9ec80ad0569d0!2sCherlagudam%2C%20Telangana%20502285!5e0!3m2!1sen!2sin!4v1744601890291!5m2!1sen!2sin" 
+              width="70%" 
+              height="320" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <footer>
+    <p>&copy; 2025 Moringa Farms. All rights reserved.</p>
+  </footer>
+
+
+
+<a href="https://wa.me/919394121841" class="whatsapp-float" target="_blank">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon">
+  Contact Us
+</a>
+
+
+<script>
+  function toggleMenu() {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.toggle('show');
+  }
+  </script> 
+  
+  <script>
+    // Initialize cart from localStorage
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+  
+    // Update cart count on page load
+    function updateCartCount() {
+      const cartCount = cart.reduce((total, item) => total + item.quantity, 0);
+      document.getElementById('cart-count').innerText = cartCount;
+    }
+    updateCartCount();
+  
+    // Add to cart button click
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+  
+    addToCartButtons.forEach(button => {
+  button.addEventListener('click', () => {
+    const productCard = button.closest('.product-card'); // 📌 safer!
+    const name = button.getAttribute('data-name');
+    const price = parseFloat(button.getAttribute('data-price'));
+    const imgSrc = productCard.querySelector('img').getAttribute('src'); // 📌 get image properly
+
+    const existingProduct = cart.find(item => item.name === name);
+
+    if (existingProduct) {
+      existingProduct.quantity += 1;
+    } else {
+      cart.push({ name, price, quantity: 1, imgSrc });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(cart));
+    updateCartCount();
+  });
+});
+
+  </script>
+  
+
+</body>
+</html>
