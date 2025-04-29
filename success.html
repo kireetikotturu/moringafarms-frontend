@@ -170,6 +170,27 @@
     } else {
       document.getElementById('order-details').innerHTML = '<p>No order details found.</p>';
     }
+
+    // After showing details, also send order details to backend
+fetch('https://your-backend-domain.com/success', {
+    method: 'POST',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ orderDetails })
+})
+.then(response => response.json())
+.then(data => {
+    console.log('Success:', data.message);
+})
+.catch((error) => {
+    console.error('Error:', error);
+});
+
+    setTimeout(() => {
+    localStorage.removeItem('orderDetails');
+}, 5000); // Clears after 5 seconds
+
   </script>
 </body>
 </html>
