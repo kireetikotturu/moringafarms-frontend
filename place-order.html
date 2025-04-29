@@ -152,28 +152,77 @@
     }
 
     /* Responsive design */
-    @media (max-width: 768px) {
-      .order-summary, .container {
-        padding: 25px;
-      }
-      h1 {
-        font-size: 2.2rem;
-      }
-      .buttons-wrapper {
-        flex-direction: column;
-      }
-      .container button {
-        width: 100%;
-      }
-    }
-    @media (max-width: 480px) {
-      h1 {
-        font-size: 1.9rem;
-      }
-      .order-summary h3, .container h2 {
-        font-size: 1.5rem;
-      }
-    }
+    @media (max-width: 780px) {
+  body {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+  }
+
+  .order-summary,
+  .container {
+    padding: 22px;
+    border-radius: 12px;
+  }
+
+  .order-summary h3,
+  .container h2 {
+    font-size: 1.7rem;
+    margin-bottom: 18px;
+  }
+
+  .order-summary p,
+  .order-summary .total-price,
+  .container p,
+  #cart-items li {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .order-summary .total-price {
+    font-size: 1.8rem;
+  }
+
+  h4 {
+    font-size: 1.4rem !important;
+    margin-top: 18px;
+  }
+
+  .container input,
+  .container textarea {
+    font-size: 1.1rem;
+    padding: 16px;
+    margin-bottom: 18px;
+  }
+
+  .buttons-wrapper {
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .container button {
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .spinner {
+    width: 60px;
+    height: 60px;
+    border-width: 6px;
+  }
+
+  .spinner-container p {
+    font-size: 1.2rem;
+    margin-top: 15px;
+  }
+}
+
   </style>
 </head>
 
