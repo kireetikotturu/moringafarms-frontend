@@ -140,7 +140,15 @@
       h1 {
         font-size: 2rem;
       }
-
+    #cart-items {
+      
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      justify-content: center;
+      align-items: center; /* Center items horizontally */
+      margin: 0 auto; /* Center the container itself horizontally */
+    }
       .cart-item {
         flex-direction: column;
         align-items: center;
@@ -195,7 +203,7 @@
 
   <h1>Your Cart</h1>
 
-  <div class="cart-item" id="cart-items"></div>
+  <div id="cart-items"></div>
 
   <div class="cart-buttons">
     <button onclick="location.href='index.html'">Home</button>
