@@ -5,186 +5,118 @@
   <title>Your Cart</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <style>
-    /* Global Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
 
-body {
-  background-color: #eaf8e7;
-  color: #2d6a4f;
-  font-size: 16px;
-  line-height: 1.6;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  min-height: 100vh;
-  padding: 20px;
-  text-align: center;
-}
+  body {
+    background-color: #eaf8e7;
+    color: #2d6a4f;
+    font-size: 16px;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px 10px;
+    text-align: center;
+  }
 
-h1 {
-  font-size: 2.5rem;
-  color: #27ae60;
-  margin-bottom: 30px;
-  font-weight: 700;
-}
-
-#cart-items {
-  width: 100%;
-  max-width: 960px;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  justify-content: center;
-  align-items: center;
-}
-
-.cart-item {
-  display: flex;
-  flex-direction: column; /* Stack items vertically in mobile view */
-  align-items: center;
-  justify-content: space-between;
-  background: linear-gradient(135deg, #d4dfd2, #fafffa);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  gap: 15px;
-  width: 100%;
-  max-width: 800px;
-  border-left: 5px solid #27ae60;
-  transition: 0.3s ease;
-}
-
-.cart-item:hover {
-  transform: translateY(-5px);
-  background-color: #e6f4ea;
-}
-
-.cart-item img {
-  width: 120px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.cart-item-info {
-  flex: 1;
-  text-align: center; /* Center the item info */
-}
-
-.cart-item-info h3 {
-  font-size: 1.3rem; /* Adjusted font size */
-  margin-bottom: 5px;
-}
-
-.cart-item-info p {
-  font-size: 0.95rem; /* Slightly smaller font size */
-  color: #555;
-  margin: 3px 0;
-}
-
-.remove-btn {
-  background-color: #486987;
-  color: white;
-  padding: 8px 14px;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.85rem; /* Slightly smaller button font */
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.remove-btn:hover {
-  background-color: #627999;
-}
-
-.cart-buttons {
-  margin-top: 30px;
-  width: 100%;
-  max-width: 600px;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  justify-content: center;
-}
-
-.cart-buttons button {
-  background-color: #27ae60;
-  color: white;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  padding: 12px 18px;
-  font-size: 1rem;
-  width: 45%;
-  min-width: 150px;
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.cart-buttons button:hover {
-  background-color: #2ecc71;
-  transform: translateY(-2px);
-}
-
-/* Empty cart styling */
-#cart-items p {
-  font-size: 1.2rem;
-  color: #888;
-  margin-top: 30px;
-}
-
-/* Mobile screens - 480px */
-@media (max-width: 480px) {
   h1 {
-    font-size: 45px; /* Adjusted heading size for mobile */
-    margin-bottom: 20px;
+    font-size: 2.2rem;
+    color: #27ae60;
+    margin-bottom: 25px;
+    font-weight: 700;
+  }
+
+  #cart-items {
+    width: 100%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
   }
 
   .cart-item {
-    flex-direction: column; /* Stack items vertically in mobile view */
-    align-items: center;
+    background: linear-gradient(135deg, #d4dfd2, #fafffa);
+    border-left: 5px solid #27ae60;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    gap: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transition: 0.3s ease;
+  }
+
+  .cart-item:hover {
+    transform: translateY(-5px);
+    background-color: #e6f4ea;
   }
 
   .cart-item img {
-    width: 120px; /* Adjust image size for mobile */
-    height: 100px;
+    width: 140px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
   }
 
   .cart-item-info h3 {
-    font-size: 1.2rem; /* Slightly smaller product title */
-    text-align: center;
+    font-size: 1.3rem;
+    margin-bottom: 5px;
   }
 
   .cart-item-info p {
-    font-size: 0.9rem; /* Slightly smaller product details */
-    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin: 3px 0;
   }
 
   .remove-btn {
-    padding: 8px 14px;
-    font-size: 0.9rem; /* Smaller button size */
+    background-color: #486987;
+    color: white;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+
+  .remove-btn:hover {
+    background-color: #627999;
   }
 
   .cart-buttons {
-    flex-direction: column;
-    width: 100%;
     margin-top: 30px;
-    gap: 10px;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
   }
 
   .cart-buttons button {
-    width: 100%;
-    padding: 14px 0; /* Taller buttons */
-    font-size: 1rem; /* Adjusted font size for buttons */
+    background-color: #27ae60;
+    color: white;
+    font-weight: bold;
+    border: none;
     border-radius: 10px;
+    padding: 14px 0;
+    font-size: 1.05rem;
+    width: 100%;
+    transition: background-color 0.3s, transform 0.2s;
+  }
+
+  .cart-buttons button:hover {
+    background-color: #2ecc71;
+    transform: translateY(-2px);
   }
 
   #cart-items p {
@@ -192,62 +124,31 @@ h1 {
     color: #888;
     margin-top: 30px;
   }
-}
 
-/* Tablet screens - 768px */
-.cart-item-info p {
-  font-size: 1rem;
-  color: #555;
-  margin: 2px 0; /* Reduced vertical spacing */
-}
+  @media (min-width: 769px) {
+    .cart-item {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-/* Mobile screens - up to 768px */
-@media (max-width: 768px) {
-  .cart-item {
-    flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    gap: 12px;
+    .cart-item-info {
+      flex: 1;
+      text-align: left;
+    }
+
+    .cart-buttons {
+      flex-direction: row;
+      justify-content: center;
+    }
+
+    .cart-buttons button {
+      width: 45%;
+      min-width: 150px;
+    }
   }
+</style>
 
-  .cart-item img {
-    width: 140px; /* Increased image width */
-    height: 120px; /* Increased image height */
-  }
-
-  .cart-item-info h3 {
-    font-size: 1.4rem; /* Increased font size */
-    text-align: center;
-  }
-
-  .cart-item-info p {
-    font-size: 1.1rem; /* Increased font size */
-    text-align: center;
-    margin: 2px 0; /* Reduced vertical gap between price and quantity */
-  }
-
-  .remove-btn {
-    font-size: 1rem;
-    padding: 10px 16px;
-  }
-
-  .cart-buttons {
-    flex-direction: column;
-    width: 100%;
-    margin-top: 30px;
-    gap: 15px;
-  }
-
-  .cart-buttons button {
-    width: 100%;
-    padding: 16px 0;
-    font-size: 1.1rem;
-    border-radius: 10px;
-  }
-}
-
-
-  </style>
 </head>
 
 <body>
