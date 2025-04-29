@@ -233,7 +233,6 @@
 
   document.getElementById('pay-online').addEventListener('click', () => {
     if (checkForm()) {
-      saveOrderDetails('online');
       fetch('https://moringafarms-backend.onrender.com/create-order', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -249,6 +248,7 @@
           description: "Test Transaction",
           order_id: data.id,
           handler: function (response) {
+            saveOrderDetails('online');
             sendPaymentDetails(response, 'online');
           },
           prefill: {
@@ -343,6 +343,7 @@
     });
   }
 </script>
+
 
 </body>
 </html>
