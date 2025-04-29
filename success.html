@@ -167,6 +167,8 @@
         li.textContent = `${item.name} - Qty: ${item.quantity} - ₹${item.price * item.quantity}`;
         itemsList.appendChild(li);
       });
+        localStorage.removeItem('cart');
+  localStorage.removeItem('totalAmount');
     } else {
       document.getElementById('order-details').innerHTML = '<p>No order details found.</p>';
     }
